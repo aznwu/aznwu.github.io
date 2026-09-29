@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsbot</title>
+  <meta name="description" content="Newsbot: a personal tool that posts a daily news-summary video to its owner's accounts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F7F8FA;
+      --ink: #1E2533;
+      --muted: #5A6475;
+      --head: #1B2A4A;
+      --link: #2F5DA8;
+      --rule: #DDE2EA;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #141A24;
+        --ink: #E4E8EF;
+        --muted: #A2ACBC;
+        --head: #F1F4F9;
+        --link: #8DB4F2;
+        --rule: #2A3342;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1.0625rem/1.7 "Source Serif 4", Georgia, "Times New Roman", serif;
+    }
+    .strip { display: flex; height: 8px; }
+    .strip span { flex: 1; }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    h1, h2 {
+      font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+      color: var(--head);
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+    h2 { font-size: 1.2rem; font-weight: 600; margin: 2.4rem 0 0.5rem; }
+    .lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 2rem; }
+    p, ul { margin: 0 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+    code { font-size: 0.92em; }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+      color: var(--muted); font-size: 0.95rem;
+    }
+    footer p { margin: 0 0 0.4rem; }
+  </style>
+</head>
+<body>
+  <!-- The colour bar uses the accent colours of the Newsbot slides. -->
+  <div class="strip" aria-hidden="true">
+    <span style="background:#5A9AE2"></span><span style="background:#E2B05A"></span><span style="background:#5AE29E"></span><span style="background:#E25A66"></span><span style="background:#935AE2"></span><span style="background:#E2935A"></span>
+  </div>
+  <main>
+    <h1>Newsbot</h1>
+    <p class="lede">A personal tool that turns each day's top news into one short video and posts it to my own social media accounts.</p>
+
+    <h2>What it does</h2>
+    <p>Once a day, on my own computer, Newsbot:</p>
+    <ul>
+      <li>reads the latest headlines from public news feeds (RSS) of major outlets;</li>
+      <li>picks the day's most important stories and writes a short, neutral summary of each, using Anthropic's Claude;</li>
+      <li>turns them into a vertical slideshow video;</li>
+      <li>posts that video to my own accounts on X, Instagram, Bluesky, Threads and YouTube.</li>
+    </ul>
+
+    <h2>Who uses it</h2>
+    <p>Only me. Newsbot is not a public service: there is no sign-up, and nobody else signs in to it. It only ever acts on accounts I own.</p>
+
+    <h2>YouTube</h2>
+    <p>Newsbot uses YouTube API Services to upload the daily video to my YouTube channel as a Short. By watching those videos you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. How Newsbot handles data is described in the <a href="privacy.html">privacy policy</a>.</p>
+    <footer>
+      <p>Newsbot is run by Aleksandar Zivkovic. Contact: <a href="mailto:zivkovic@gmail.com">zivkovic@gmail.com</a></p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </footer>
+  </main>
+</body>
+</html>
